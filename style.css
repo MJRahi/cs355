@@ -11,25 +11,132 @@ body{
     background: rgb(250, 250, 250);
     color: black;
 }
-#header {
-    width: 100%;
-    height: 100vh;
-    background-image: url(b9e0640a-6fab-4349-bfe3-3002f249c006.png);
-    background-size: cover;
-    background-position: center;
-}
-.container{
-    padding: 10px 10%;
-
-}
-nav{
+.toggle-mode {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #AA885E;
+  }
+  /* Make the toggle button match nav links (like Home, About) */
+.toggle-mode button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #AA885E;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+  }
+  
+  .toggle-mode button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: red;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+  
+  .toggle-mode button:hover::after {
+    width: 100%;
+  }
+
+  /* 🌙 Dark Mode Styling */
+  .dark-mode #header {
+    background-color: #121212; /* or any dark color you like */
+  }
+.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  .dark-mode nav {
     background-color: #103031;
-    
+  }
+  
+  .dark-mode nav ul li a {
+    color: #f5f5f5;
+  }
+  
+  .dark-mode .header-left h1 span,
+  .dark-mode .sub-title,
+  .dark-mode .contact-left p,
+  .dark-mode .social-icons a,
+  .dark-mode .cv-btn,
+  .dark-mode .copyright p {
+    color: #f5f5f5;
+  }
+  
+  .dark-mode .services-list div,
+  .dark-mode .contact-right {
+    background-color: #222;
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+  }
+  
+  .dark-mode input,
+  .dark-mode textarea {
+    background-color: #333;
+    color: #f5f5f5;
+    border: 1px solid #777;
+  }
+  
+  .dark-mode .btn.btn2,
+  .dark-mode .cv-btn {
+    background-color: #444;
+    color: white;
+  }
+  
+  .dark-mode .layer {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), #444);
+  }
+#header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
 }
+
+
+.container {
+  padding: 0 10%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* adjust as needed */
+    max-width: 1200px;
+    z-index: 1000;
+    background-color: #103031;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    border-radius: 0 0 15px 15px; /* optional for rounded bottom */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+  }
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 .logo{
     width: 140px;
 }
@@ -71,16 +178,62 @@ nav ul li a:hover::after{
     color: #AA885E;
 }
 
+.header-left {
+  flex-basis: 50%;
+  font-size: 2.0vw;
+  margin-top: -5%;           
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.header-left h1 {
+  font-size: 3.5vw; /* smaller headline */
+  margin-top: 10px;
+}
+
+
+.header-left h1 span {
+  color: #AA885E;
+}
+
+.header-right {
+  flex-basis: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;  /* changed from center to push it right */
+  margin-top: 20px;
+  padding-right: 0;
+  margin-right: -1px; /* this is the key to remove the final gap */
+}
+
+
+.hero-img {
+  width: 130%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  transform: scale(1.32) translateY(18px); /* Push image down */
+}
+
+
 /*-------------about--------*/
 #about{
     padding: 8px 0;
     color: black;
+    margin-top: 60px;
 }
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
 }
+
 .about-col-1{
     flex-basis: 45%;
 }
@@ -193,7 +346,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#f49445);
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(99, 194, 163));
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -207,6 +360,7 @@ nav ul li a:hover::after{
     text-align: center;
     font-size:14px ;
     transition: height 0.5s;
+    color: white;
 }
 .layer h3{
     font-weight: 500;
@@ -226,9 +380,6 @@ nav ul li a:hover::after{
 
 
 
-
-
-
 }
 
 
@@ -236,25 +387,58 @@ nav ul li a:hover::after{
 .contact-left{
     flex-basis: 35%;
 }
-.contact-right{
-    flex-basis: 60%;
-}
-.contact-left p{
-    margin-top: 30px;
+
+.contact-left .btn.btn2 {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+  }
+  .contact-left p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #AA885E;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+.contact-right {
+    flex-basis: 50%; 
+    max-width: 600px; 
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+
 }
 .social-icons{
     margin-top: 30px;
 }
-.social-icons a{
+.social-icons a {
     text-decoration: none;
     font-size: 40px;
     margin-right: 15px;
     color: #AA885E;
     display: inline-block;
     transition: transform 0.5s;
-}
+    font-weight: bold;
+  }
+  .cv-btn {
+    background-color: transparent;
+    color: #AA885E;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    border: none;
+  }
+  .cv-btn:hover {
+    color: rgb(76, 139, 118); / Optional hover color */
+    transform: translateY(-2px);
+  }
+
 .social-icons a:hover{
-    color: rgb(51, 28, 204);
+    color: rgb(88, 180, 150);
     transform: translate(-5px);
 }
 .btn.btn2{
@@ -263,6 +447,7 @@ nav ul li a:hover::after{
 }
 .contact-right form{
     width: 100%;
+    margin-bottom: 10px;
 }
 form input, form textarea{
 
@@ -278,7 +463,7 @@ form input, form textarea{
 }
 form .btn.btn2{
     padding: 14px 60px;
-    
+    margin-bottom: 0;
     font-size: 18px ;
     margin-top: 20px;
     cursor: pointer;
@@ -290,14 +475,31 @@ form .btn.btn2{
 .work:hover .layer{
     height: 100%;
 }
-.copyright{
+#contact {
     width: 100%;
-    text-align:center;
-    padding: 25px 0;
+    text-align: center;
+    padding: 80px 0 40px; 
     background: #0d4f46;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 80px; 
 }
-.copyright p{
- color: #AA885E;
+#contact .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Make left and right start at same height */
+    flex-wrap: wrap;
+  }
+  .copyright p {
+    color: #AA885E;
+    margin-top: 40px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+#about,
+#services,
+#portfolio {
+  padding-top: 125px;   /* More top space */
+  padding-bottom: 60px; /* More bottom space */
 }
