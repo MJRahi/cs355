@@ -157,15 +157,17 @@
                         <a href="#"> <i class="fa-brands fa-twitter"></i></a>
                         <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a href="/resume.pdf" class="btn cv-btn" target="_blank">Download CV</a>
+                    <a href="https://afk.ac/rahi/resume.pdf" class="btn cv-btn" target="_blank">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form action="https://formspree.io/f/xbloqlva" method="POST">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2"> Submit</button>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <p id="form-message" style="margin-top: 10px;"></p>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -206,5 +208,21 @@
     });
   });
       </script>
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = this;
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        document.getElementById("form-message").innerText = "✅ Thank you! Your message has been sent.";
+        form.reset();
+    }).catch(error => {
+        document.getElementById("form-message").innerText = "❌ Oops! Something went wrong.";
+    });
+});
+</script>
       </body>
       </html>
