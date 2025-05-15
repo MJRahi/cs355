@@ -1,228 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rahi's Portfolio website</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/6508f7b280.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div id="header">
-    <div class="container">
-      <nav>
-        <img src="logo_green.png" class="logo" width="100" />
-        <ul>
-          <li><a href="#header"> Home</a></li>
-          <li><a href="#about"> About</a></li>
-          <li><a href="#services"> My Projects</a></li>
-          <li><a href="#portfolio"> My Life</a></li>
-          <li><a href="#contact"> Contact</a></li>
-          <!-- 🌗 Toggle goes right here -->
-          <li class="toggle-mode">
-            <button id="themeToggle" aria-label="Toggle Dark Mode">🌞</button>
-          </li>
-        </ul>
-      </nav>
-      <div class="row">
-        <!-- Left Text Side -->
-        <div class="header-left">
-          <p>Web Developer</p>
-          <h1>Hi, I'm <span>Rahi</span><br />and I'm a student<br />at Queen's College</h1>
-        </div>
-        <!-- Right Image Side -->
-        <div class="header-right">
-          <img src="rahi-pic.png" alt="Rahi photo" class="hero-img" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahi's Portfolio website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6508f7b280.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="https://afk.ac/rahi/" target="_blank">
+            <img
+              src="logo_green.png"
+              class="logo"
+              width="100"
+              alt="Rahi Logo"
+            />
+          </a>
+          <ul>
+            <li><a href="#header"> Home</a></li>
+            <li><a href="#about"> About</a></li>
+            <li><a href="#services"> My Projects</a></li>
+            <li><a href="#portfolio"> My Life</a></li>
+            <li><a href="#contact"> Contact</a></li>
+            <!-- 🌗 Toggle goes right here -->
+            <li class="toggle-mode">
+              <button id="themeToggle" aria-label="Toggle Dark Mode">🌞</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="row">
+          <!-- Left Text Side -->
+          <div class="header-left">
+            <p>Web Developer</p>
+            <h1>
+              Hi, I'm <span>Rahi</span><br />and I'm a student<br />at Queen's
+              College
+            </h1>
+          </div>
+          <!-- Right Image Side -->
+          <div class="header-right">
+            <img src="rahi-pic.png" alt="Rahi photo" class="hero-img" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="about_me.jpg" width="400px">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title"> About me</h1>
-                    <h3><p>I’ve been obsessed with creating beautiful designs—whether through digital art, web design, or intricate henna artistry. My love for creativity led me to study Computer Science, where I get to blend logic with aesthetics to build engaging digital experiences.
-                        I’m passionate about UI/UX design, front-end development, and artistic expression. Whether it’s designing a website, sketching a new concept, or creating henna patterns, I love turning ideas into visuals that inspire.
-                    </p></h3>
-                    <div class="tab-title">
-                        <p class="tab-links active-link" onclick="opentab('Education')">Education </p>
-                        <p class="tab-links" onclick="opentab('Skills')">Skills </p>
-                        <p class="tab-links" onclick="opentab('Experiences')">Experiences </p>
-                    </div>
-                    <div class="tab-contents active-tab" id="Education">
-                        <ul>
-                            <li><span>Queens College, CUNY</span><br>(Junior Year, Bachelor of Science in Computer Science)</li>
-                            <li><span>LaGuardia Community College</span><br>(Graduated In 2023, Associate of Science in Computer Science.)</li>
-                            <li><span>Police Lines School and College, Bangladesh</span>(High School)</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Skills">
-                        <ul>
-                            <li><span>Design</span><br>UI/UX, Figma, Canva</li>
-                            <li><span>Creativity</span><br>Henna art, illustration</li>
-                            <li><span>Hardworking</span><br>Dedicated and focused</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="Experiences">
-                        <ul>
-                            <li><span>Freelance Projects</span><br>Built web interfaces for small businesses</li>
-                            <li><span>Student Clubs</span><br>Organized design events and web workshops</li>
-                            <li><span>Academic Projects</span><br>Hands-on projects in databases and algorithms</li>
-                        </ul>
-                    </div>
-                </div>
-
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="about_me.jpg" width="400px" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <h3>
+              <p>
+                I’ve been obsessed with creating beautiful designs—whether
+                through digital art, web design, or intricate henna artistry. My
+                love for creativity led me to study Computer Science, where I
+                get to blend logic with aesthetics to build engaging digital
+                experiences. I’m passionate about UI/UX design, front-end
+                development, and artistic expression. Whether it’s designing a
+                website, sketching a new concept, or creating henna patterns, I
+                love turning ideas into visuals that inspire.
+              </p>
+            </h3>
+            <div class="tab-title">
+              <p class="tab-links active-link" onclick="opentab('Education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('Experiences')">
+                Experiences
+              </p>
             </div>
+            <div class="tab-contents active-tab" id="Education">
+              <ul>
+                <li>
+                  <span>Queens College, CUNY</span><br />(Junior Year, Bachelor
+                  of Science in Computer Science)
+                </li>
+                <li>
+                  <span>LaGuardia Community College</span><br />(Graduated In
+                  2023, Associate of Science in Computer Science.)
+                </li>
+                <li>
+                  <span>Police Lines School and College, Bangladesh</span>(High
+                  School)
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Skills">
+              <ul>
+                <li><span>Design</span><br />UI/UX, Figma, Canva</li>
+                <li><span>Creativity</span><br />Henna art, illustration</li>
+                <li><span>Hardworking</span><br />Dedicated and focused</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experiences">
+              <ul>
+                <li>
+                  <span>Freelance Projects</span><br />Built web interfaces for
+                  small businesses
+                </li>
+                <li>
+                  <span>Student Clubs</span><br />Organized design events and
+                  web workshops
+                </li>
+                <li>
+                  <span>Academic Projects</span><br />Hands-on projects in
+                  databases and algorithms
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--------------------My Projects----------->
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title"> My Projects</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-arrow-trend-up"></i>
-                    <h2> Stock Market Profit & Loss Estimator (Java, Data Structures) </h2>
-                    <p> Built a Java-based tool to estimate stock market profits and losses using data structures. Implemented buy-sell strategies and optimized calculations for financial analysis.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2> Tic-Tac-Toe Game (C++, Game Logic) </h2>
-                    <p> Developed a C++ Tic-Tac-Toe game with AI logic for single-player mode. Used Minimax Algorithm for AI moves and designed a simple grid-based system.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-database"></i>
-                    <h2> Database Management System (SQL, Database Design) </h2>
-                    <p> Designed a database system with CRUD operations for managing user data. Used SQL queries, stored procedures, and indexing for efficient data handling. </p>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+          <a
+            href="https://github.com/MJRahi/Quiz-App"
+            target="_blank"
+            style="text-decoration: none; color: inherit"
+          >
+            <div>
+              <i class="fa-solid fa-brain"></i>
+              <h2>Interactive Quiz App (Node.js, Express, EJS)</h2>
+              <p>
+                A full-stack quiz platform where users can register, log in, and
+                take dynamic quizzes. Built with Node.js, Express, EJS, and
+                bcrypt. Key features include dark/light mode, answer validation
+                with visual feedback, confetti animations, countdown timers, and
+                a persistent leaderboard. Deployed at
+                <span style="color: #eb8d40; font-weight: bold"
+                  >quiz.afk.ac</span
+                >.
+              </p>
             </div>
+          </a>
+
+          <div>
+            <i class="fa-solid fa-gamepad"></i>
+            <h2>Tic-Tac-Toe Game (C++, Game Logic)</h2>
+            <p>
+              Developed a C++ Tic-Tac-Toe game with AI logic for single-player
+              mode. Used Minimax Algorithm for AI moves and designed a simple
+              grid-based system.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-database"></i>
+            <h2>Database Management System (SQL, Database Design)</h2>
+            <p>
+              Designed a database system with CRUD operations for managing user
+              data. Used SQL queries, stored procedures, and indexing for
+              efficient data handling.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <!---------------------- My Life-------------->
     <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title"> My Life</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="studying.png">
-                    <div class="layer">
-                        <h3> Studying</h3>
-                        <p> Studying at Queen’s College with focus on computer science and design.</p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="henna.JPG">
-                    <div class="layer">
-                        <h3>Applying Henna</h3>
-                        <p> Passionate about intricate, traditional, and modern henna styles.</p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Ffriends.JPG">
-                    <div class="layer">
-                        <h3> Hanging Out with Friends </h3>
-                        <p> Making memories and relaxing with those who matter most.</p>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="nature.jpg">
-                    <div class="layer">
-                        <h3> Alone Time</h3>
-                        <p> Reflecting, creating, and finding calm in nature and solitude.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My Life</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="studying.png" />
+            <div class="layer">
+              <h3>Studying</h3>
+              <p>
+                Studying at Queen’s College with focus on computer science and
+                design.
+              </p>
             </div>
-
+          </div>
+          <div class="work">
+            <img src="henna.JPG" />
+            <div class="layer">
+              <h3>Applying Henna</h3>
+              <p>
+                Passionate about intricate, traditional, and modern henna
+                styles.
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Ffriends.JPG" />
+            <div class="layer">
+              <h3>Hanging Out with Friends</h3>
+              <p>Making memories and relaxing with those who matter most.</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="nature.jpg" />
+            <div class="layer">
+              <h3>Alone Time</h3>
+              <p>
+                Reflecting, creating, and finding calm in nature and solitude.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!----------Contact information---------->
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title"> Contact me</h1>
-                    <p> <i class="fas fa-paper-plane"></i> Rahi9919@gmail.com</p>
-                    <p> <i class="fa-solid fa-phone-volume"></i>  123-456-789</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/"> <i class="fa-brands fa-square-facebook"></i></a>
-                        <a href="https://www.instagram.com/"> <i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="#"> <i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <a href="https://afk.ac/rahi/resume.pdf" class="btn cv-btn" target="_blank">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form action="https://formspree.io/f/xbloqlva" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                        <p id="form-message" style="margin-top: 10px;"></p>
-                    </form>
-
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact me</h1>
+            <p><i class="fas fa-paper-plane"></i> Rahi9919@gmail.com</p>
+            <p><i class="fa-solid fa-phone-volume"></i> 123-456-789</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-square-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+              <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
             </div>
+            <a
+              href="https://afk.ac/rahi/resume.pdf"
+              class="btn cv-btn"
+              target="_blank"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form action="https://formspree.io/f/xbloqlva" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+              <p id="form-message" style="margin-top: 10px"></p>
+            </form>
+          </div>
         </div>
-        <div class="copyright">
-            <p>Rahi's Portfolio</p>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>Rahi's Portfolio</p>
+      </div>
     </div>
 
     <script>
-        // ---------- Tab functionality ----------
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-      
-        function opentab(tabname) {
-          for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
-          }
-          for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-          }
-          event.currentTarget.classList.add("active-link");
-          document.getElementById(tabname).classList.add("active-tab");
+      // ---------- Tab functionality ----------
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
-      
-        // ---------- Dark mode toggle ----------
-        document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("themeToggle");
-
-    toggleBtn.addEventListener("click", function () {
-      document.body.classList.toggle("dark-mode");
-
-      // Switch icon
-      if (document.body.classList.contains("dark-mode")) {
-        toggleBtn.textContent = "🌙";
-      } else {
-        toggleBtn.textContent = "🌞";
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
       }
-    });
-  });
-      </script>
-<script>
-document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const form = this;
-    fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-    }).then(response => {
-        document.getElementById("form-message").innerText = "✅ Thank you! Your message has been sent.";
-        form.reset();
-    }).catch(error => {
-        document.getElementById("form-message").innerText = "❌ Oops! Something went wrong.";
-    });
-});
-</script>
-      </body>
-      </html>
+
+      // ---------- Dark mode toggle ----------
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.getElementById("themeToggle");
+
+        toggleBtn.addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+
+          // Switch icon
+          if (document.body.classList.contains("dark-mode")) {
+            toggleBtn.textContent = "🌙";
+          } else {
+            toggleBtn.textContent = "🌞";
+          }
+        });
+      });
+    </script>
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const form = this;
+        const msg = document.getElementById("form-message");
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        })
+          .then(() => {
+            msg.innerText = "✅ Thank you! Your message has been sent.";
+            msg.style.color = "#28a745";
+            animateMessage(msg);
+            form.reset();
+
+            // 🎉 Launch confetti in the button
+            confetti({
+              particleCount: 150,
+              startVelocity: 45,
+              spread: 90,
+              origin: { x: 0.5, y: 0.5 },
+            });
+          })
+          .catch(() => {
+            msg.innerText = "❌ Oops! Something went wrong.";
+            msg.style.color = "#dc3545"; // red
+            animateMessage(msg);
+          });
+
+        function animateMessage(el) {
+          el.style.opacity = 0;
+          el.style.transform = "scale(0.95)";
+          el.style.transition = "all 0.5s ease";
+
+          setTimeout(() => {
+            el.style.opacity = 1;
+            el.style.transform = "scale(1.05)";
+          }, 50);
+
+          setTimeout(() => {
+            el.style.transform = "scale(1)";
+          }, 550);
+
+          setTimeout(() => {
+            el.innerText = "";
+          }, 4000);
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
